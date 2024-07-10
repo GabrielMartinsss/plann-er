@@ -2,11 +2,7 @@ import { FastifyInstance } from "fastify";
 import { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod"
 import { prisma } from "../lib/prisma";
-import { getMailClient } from "../lib/mail";
-import nodemailer from "nodemailer"
 import { dayjs } from "../lib/dayjs";
-
-
 
 export async function getActivities(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().get('/trips/:tripId/activities', {
