@@ -11,10 +11,10 @@ export function TripDetailsPage() {
   const [isCreateActivityModalOpen, setIsCreateActivityModalOpen] =
     useState(false)
 
-  function openCreateActivityModalOpen() {
+  function openCreateActivityModal() {
     setIsCreateActivityModalOpen(true)
   }
-  function closeCreateActivityModalOpen() {
+  function closeCreateActivityModal() {
     setIsCreateActivityModalOpen(false)
   }
 
@@ -27,7 +27,7 @@ export function TripDetailsPage() {
           <div className="flex items-center justify-between">
             <h2 className="text-3xl font-semibold">Atividades</h2>
 
-            <Button onClick={openCreateActivityModalOpen}>
+            <Button onClick={openCreateActivityModal}>
               <Plus className="size-5" />
               Cadastrar atividade
             </Button>
@@ -47,7 +47,7 @@ export function TripDetailsPage() {
 
       {isCreateActivityModalOpen && (
         <CreateActivityModal
-          closeCreateActivityModalOpen={closeCreateActivityModalOpen}
+          closeCreateActivityModal={closeCreateActivityModal}
         />
       )}
     </div>
